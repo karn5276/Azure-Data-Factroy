@@ -1,0 +1,54 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "etl-sis-dev-001"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage2_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
+		"AzureSqlDatabase2_password": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "u060etla801.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "free-sql-db-3837161-dev"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "btw1594"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_server": {
+			"value": "u060etla801.database.windows.net"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_database": {
+			"value": "free-sql-db-3837161-dev"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_userName": {
+			"value": "btw1594"
+		},
+		"event_trigger_properties_typeProperties_scope": {
+			"value": "/subscriptions/85c2cc2c-8691-44f1-b192-46c7ae91c2ad/resourceGroups/krogerPractice/providers/Microsoft.Storage/storageAccounts/etlsisdev001storage"
+		},
+		"tumblingTrigger_properties_pipeline_parameters_pstartdate": {
+			"value": "@trigger().outputs.windowstarttime"
+		},
+		"tumblingTrigger_properties_pipeline_parameters_penddate": {
+			"value": "@trigger().outputs.windowstarttime"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
