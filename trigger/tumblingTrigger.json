@@ -1,0 +1,30 @@
+{
+	"name": "tumblingTrigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipeline": {
+			"pipelineReference": {
+				"referenceName": "copy_from_sql_to_container_using_store_procedure",
+				"type": "PipelineReference"
+			},
+			"parameters": {
+				"pstartdate": "@trigger().outputs.windowstarttime",
+				"penddate": "@trigger().outputs.windowstarttime"
+			}
+		},
+		"type": "TumblingWindowTrigger",
+		"typeProperties": {
+			"frequency": "Hour",
+			"interval": 24,
+			"startTime": "2024-03-01T00:00:00Z",
+			"endTime": "2024-03-06T05:20:41Z",
+			"delay": "00:00:00",
+			"maxConcurrency": 50,
+			"retryPolicy": {
+				"intervalInSeconds": 30
+			},
+			"dependsOn": []
+		}
+	}
+}

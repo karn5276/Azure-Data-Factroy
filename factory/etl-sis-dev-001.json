@@ -1,0 +1,15 @@
+{
+	"name": "etl-sis-dev-001",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Enabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "0776774a-bd63-42af-87ac-c247851b81cf",
+		"tenantId": "5458cddc-7fce-46c7-b522-7d5ade306f75"
+	}
+}

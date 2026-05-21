@@ -1,0 +1,45 @@
+{
+	"name": "DelimitedText8",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "customers1.txt",
+				"container": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "{\"customer_id\": 101",
+				"type": "String"
+			},
+			{
+				"name": " \"name\": \"Amit Sharma\"",
+				"type": "String"
+			},
+			{
+				"name": " \"email\": \"amit@gmail.com\"",
+				"type": "String"
+			},
+			{
+				"name": " \"city\": \"Pune\"",
+				"type": "String"
+			},
+			{
+				"name": " \"updated_at\": \"2024-04-01 10:00:00\"}",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
